@@ -2,6 +2,15 @@
 
 @section('title', "Register")
 
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <a href="{{ route('home') }}"><u>Back to Home</u></a>
+        </div>
+    </div>
+</div>
+
 <div class="container mt-5">
     <div class="row">
         <div class="col-md-6 offset-md-3">
@@ -35,7 +44,7 @@
 
                         <div class="form-group mt-4">
                             <button type="submit" class="btn btn-primary btn-block">Register</button>
-                            <button type="reset" class="btn btn-danger btn-block">Clear inputs</button>
+                            <button type="reset" class="btn btn-danger btn-block">Clear</button>
                         </div>
                     </form>
                 </div>

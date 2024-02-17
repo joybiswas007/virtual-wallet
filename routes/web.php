@@ -17,10 +17,10 @@ use Illuminate\Http\Response;
 
 Route::get('/', function () {
     return view('pages/home');
-});
+})->name("home");
 
 Route::get("/login", function (Request $request, Response $response) {
-    echo $request->ip();
+    return view("pages/login");
 })->name("login");
 
 Route::get("/register", function (Request $request, Response $response) {
