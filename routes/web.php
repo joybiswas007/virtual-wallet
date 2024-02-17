@@ -19,10 +19,20 @@ Route::get('/', function () {
     return view('pages/home');
 })->name("home");
 
-Route::get("/login", function (Request $request, Response $response) {
-    return view("pages/login");
+Route::get("/login", function () {
+    return view("pages.login");
 })->name("login");
 
-Route::get("/register", function (Request $request, Response $response) {
-    return view("pages/register");
+Route::get("/register", function () {
+    return view("pages.register");
 })->name("register");
+
+
+Route::get("/dashboard", function () {
+    $users = ["A", "B", "C", "D", "E", "F", "H", "I", "J"];
+    return view("pages.dashboard", ['users' => $users]);
+})->name("dashboard");
+
+Route::post('/logout', function ($id) {
+    return redirect("/");
+})->name("logout");
